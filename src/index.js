@@ -18,6 +18,9 @@ const port = process.env.PORT || 3000;
 app.get('/', (req, res) => {
     return res.send('Welcome to the server!');
 });
+app.get('/test', (req, res) => {
+    return res.send('Test route');
+});
 routes(app);
 app.use(notFound);
 app.use(errorHandlingMiddleware);
